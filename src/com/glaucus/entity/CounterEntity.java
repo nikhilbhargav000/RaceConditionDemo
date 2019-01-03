@@ -5,6 +5,13 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/**
+ *  ORM of Counter Entity for 'Counter_Table' Table
+ * 
+ * @author nikhil
+ * @version 1.0
+ * @since 2019-01-03
+ */
 @Entity
 @Table(name="Counter_Table")
 public class CounterEntity {

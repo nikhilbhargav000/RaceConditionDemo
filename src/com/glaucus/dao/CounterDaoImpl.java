@@ -11,9 +11,19 @@ import org.springframework.stereotype.Repository;
 import com.glaucus.entity.CounterEntity;
 import com.glaucus.exception.GlaucusDBException;
 
+/**
+ * Dao layer implementation for CounterEntity 
+ * 
+ * @author nikhil
+ * @version 1.0
+ * @since 2019-01-03
+ */
 @Repository
 public class CounterDaoImpl implements CounterDao {
 	
+	/**
+	 *  insert CounterEntity into DB
+	 */
 	public void insert(CounterEntity counterEntity) throws GlaucusDBException {
 		Session session = null;
 		try {
@@ -37,6 +47,9 @@ public class CounterDaoImpl implements CounterDao {
 		
 	}
 	
+	/**
+	 *  get CounterEntity from DB where Counter_Name is equal to counterName
+	 */
 	public CounterEntity get(String counterName) throws GlaucusDBException {
 		Session session = null;
 		CounterEntity counterEntity = null;
@@ -60,6 +73,9 @@ public class CounterDaoImpl implements CounterDao {
 		}
 		return counterEntity;
 	}
+	/**
+	 * Update the CounterEnitity
+	 */
 	public void update(CounterEntity counterEntity) throws GlaucusDBException {
 		Session session = null;
 		try {

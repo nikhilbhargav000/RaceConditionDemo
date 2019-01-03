@@ -7,7 +7,13 @@ import java.util.logging.SimpleFormatter;
 
 import org.springframework.instrument.classloading.glassfish.GlassFishLoadTimeWeaver;
 
-
+/**
+ * This is the Logger class for application
+ * 
+ * @author nikhil
+ * @version 1.0
+ * @since 2019-01-03
+ */
 public class GlaucusLogger {
 	private static GlaucusLogger glaucusLogger;
 	private Logger logger;

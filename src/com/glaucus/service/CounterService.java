@@ -8,12 +8,25 @@ import com.glaucus.dao.HibernateUtil;
 import com.glaucus.entity.CounterEntity;
 import com.glaucus.exception.GlaucusDBException;
 
+/**
+ * Contains all the business logic related to counter mapping
+ * 
+ * @author nikhil
+ * @version 1.0
+ * @since 2019-01-03
+ */
 @Service
 public class CounterService {
 
 	@Autowired
 	CounterDao counterDao;
 	
+	/**
+	 * 
+	 * @param counterName : counter name for which count is to be incremented
+	 * @return
+	 * @throws GlaucusDBException
+	 */
 	public int incrementCounter(String counterName) throws GlaucusDBException {
 		
 		synchronized (HibernateUtil.getSessionFactory()) {

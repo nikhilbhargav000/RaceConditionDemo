@@ -6,6 +6,13 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 import org.hibernate.service.ServiceRegistryBuilder;
 
+/**
+ * Hibernate Utilities class
+ * 
+ * @author nikhil
+ * @version 1.0
+ * @since 2019-01-03
+ */
 public class HibernateUtil {
 	
 	private static SessionFactory sessionFactory;
@@ -18,6 +25,10 @@ public class HibernateUtil {
 		sessionFactory = config.buildSessionFactory(serviceRegistery);
 	}
 	
+	/**
+	 * 
+	 * @return : Session Factory static instance 
+	 */
 	public static SessionFactory getSessionFactory() {
 		return sessionFactory;
 	}

@@ -8,6 +8,13 @@ import org.springframework.stereotype.Component;
 
 import com.glaucus.utility.GlaucusLogger;
 
+/**
+ * Aspects for CounterService class`s methods
+ * @author nikhil
+ * @version 1.0
+ * @since 2019-01-03
+ */
+
 @Component
 @Aspect
 public class CounterServiceAspect {

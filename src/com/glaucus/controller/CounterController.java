@@ -11,6 +11,13 @@ import com.glaucus.exception.GlaucusDBException;
 import com.glaucus.service.CounterService;
 import com.glaucus.utility.GlaucusLogger;
 
+/**
+ * Handle all the requests starting with mapping 'counter'
+ * 
+ * @author nikhil
+ * @version 1.0
+ * @since 2019-01-03
+ */
 @Controller
 @RequestMapping(value="counter")
 public class CounterController {
@@ -20,6 +27,11 @@ public class CounterController {
 	
 	GlaucusLogger logger = GlaucusLogger.getLogger();
 	
+	/**
+	 * 
+	 * @param counterName : name of the counter who`s value is about to be incremented 
+	 * @return
+	 */
 	@RequestMapping(value="/{counterName}/increment")
 	public ResponseEntity<String> incrementCounter(@PathVariable(name="counterName")
 			String counterName){
